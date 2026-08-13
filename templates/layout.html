@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+
+    <!-- Google Font (replace 'Righteous' with your chosen font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- W3.CSS framework -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Your custom CSS (must come after W3.CSS to override it) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="w3-container">
+
+    <!-- Shared header -->
+    <div class="w3-container w3-padding">
+        <h1>Cool ships
+        </h1>
+    </div>
+
+    <!-- Shared navigation bar -->
+    <div class="w3-bar w3-blue-grey">
+        <a href="/" class="w3-bar-item w3-button">Home</a>
+    </div>
+
+    <!-- Page-specific content goes here -->
+    {% block body %}
+    {% endblock %}
+
+</body>
+</html>
