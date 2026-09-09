@@ -28,7 +28,7 @@ def query_db(query, args=(), one=False):
 @app.route('/')
 def home():
     sql = """
-        SELECT ships.shipID, ships.name, countries.name, ships.image
+        SELECT admirals.admiralsID, admirals.name, countries.name, admirals.image
         FROM ships
         INNER JOIN countries
         ON ships.countryID = countries.countryID;
