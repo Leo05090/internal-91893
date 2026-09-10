@@ -29,18 +29,18 @@ def query_db(query, args=(), one=False):
 def home():
     sql = """
         SELECT admirals.admiralsID, admirals.name, countries.name, admirals.image
-        FROM ships
+        FROM admirals
         INNER JOIN countries
-        ON ships.countryID = countries.countryID;
+        ON admirals.countryID = countries.countryID;
     """
     results = query_db(sql)
     return render_template('home.html', results=results)
 
-@app.route('/ships/<int:id>')
+@app.route('/admirals/<int:id>')
 def ship(id):
     sql = """
-        SELECT ships.shipID, ships.name, countries.name , ships.Standard_Displacement, ships.Full_Load_Displacement, ships.size_of_cannon, ships.image
-        FROM ships
+        SELECT admirals.admiralsID, admirals.admirals_name, countries.name , admirals.birth, admirals.deceased, admirals.admirals_detail, admirals.Completed_year, admirals.countryID, admirals.image, admirals.eventID
+        FROM admirals
         JOIN countries ON countries.countryID = ships.countryID
         WHERE countries.countryID = ?
     """
