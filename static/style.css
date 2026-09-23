@@ -3,5 +3,11 @@ body, h1, h2, h3, p {
 }
 
 img {
-    width: 100%;
+    width: 40%;
+}
+.portrait {
+    width: 40%;
+}
+.flag {
+    width: 15%;
 }
