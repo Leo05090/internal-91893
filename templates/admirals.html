@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="two-column">
+    <div class="info">
+        <h2>{{ admiral[1] }}</h2>
+        <h3>country: {{ admiral[2] }}</h3>
+        <h3>birth: {{ admiral[3] }}</h3>
+        <h3>deceased: {{ admiral[4] }}</h3>
+        <h3>class: {{ admiral[5] }}</h3>
+        <p>admirals_detail: {{ admiral[6] }}</p>
+        <img src="{{ url_for('static', filename='images/' + str(admiral[7])) }}" alt="{{ str(admiral[1]) }}" width="200">
+        <img src="{{ url_for('static', filename='images/' + admiral[10]) }}" alt="{{ admiral[2] }}" width="200">
+    </div>
+</div>
+
+{% endblock %}

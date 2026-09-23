@@ -3,13 +3,13 @@
 {% block body %}
 <h2>Listing</h2>
 <div class="three-column">
-    {% for ship in results %}
+    {% for admiral in results %}
 
     
-    <a href="{{ url_for('ship', id=ship[0]) }}">
+    <a href="{{ url_for('admiral', id=admiral[0]) }}">
         <div class="w3-card-4">
-            <h3>{{ ship[1] }} {{ ship[2] }}
-            <img src="{{ url_for('static', filename='images/' + ship[3]) }}" alt="{{ ship[1] }}" width="200">
+            <h3>{{ admiral[1] }} {{ admiral[2] }}
+            <img src="{{ url_for('static', filename='images/' + admiral[3]) }}" alt="{{ admiral[1] }}" width="200">
         </div>
     </a>
     
