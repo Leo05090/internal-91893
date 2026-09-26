@@ -12,6 +12,7 @@
         <p>admirals_detail: {{ admiral[6] }}</p>
         <img class="portrsit" src="{{ url_for('static', filename='images/' + admiral[8]) }}" alt="{{ admiral[1] }}" width="200">
         <img class="flag" src="{{ url_for('static', filename='images/' + admiral[10]) }}" alt="{{ admiral[2] }}" width="200">
+        <a href="{{ url_for('event') }}">Events</a>
     </div>
 </div>
 

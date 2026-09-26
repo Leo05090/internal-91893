@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h2>events</h2>
+<div class="three-column">
+    {% for event in results %}
+
+    
+    
+        <div class="w3-card-4">
+            <h3>{{ event[0] }} {{ event[1] }}
+            <p>{{event[2]}}</p> 
+    
+    
+
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+
+</h3>

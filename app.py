@@ -47,5 +47,14 @@ def admiral(id):
     result = query_db(sql, (id,), one=True)
     return render_template('admirals.html', admiral=result)
 
+@app.route('/events')
+def event():
+    sql = """
+        SELECT event.event_name, event.event_year, event.event_detail
+        FROM event;
+    """
+    results = query_db(sql)
+    return render_template('event.html', results=results)
+
 if __name__ == "__main__":
     app.run(debug=True)
